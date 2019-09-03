@@ -1,0 +1,72 @@
+\ProvidesPackage{Omdtz}
+
+\usepackage{tikz}
+\usepackage{pdfpages,caption,geometry}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  total={170mm,257mm},
+  left=20mm,
+  top=40mm,
+  bottom=30mm,
+}
+
+\usepackage{fontspec}
+\setmainfont{Exo 2}[
+    Path            =   Fonts/,
+    Extension       =   .otf,
+    UprightFont     =   *-Regular,
+    ItalicFont      =   *-Italic,
+    BoldFont        =   *-Bold,
+    BoldItalicFont  =   *-BoldItalic,
+    FontFace        =   {black}{n}{*-Black},
+    FontFace        =   {black}{it}{*-BlackItalic},
+]
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{tocloft}
+\usepackage[english]{babel}
+
+\usepackage{footnote}
+\makesavenoteenv{tabular} %For creating linked footnotes in a table
+
+\usepackage[dvipsnames]{xcolor}
+%Defining colour with different models.
+\definecolor{OMDTZblue}{RGB}{51,153,225}
+\definecolor{OMDTZgreen}{RGB}{0,204,0}
+\definecolor{OMDTZgrey}{RGB}{101,101,101}
+
+\usepackage[]{hyperref}
+\hypersetup{colorlinks,linkcolor=OMDTZblue}
+% to match the OMDTZ blue text
+  
+
+\usepackage{sectsty}
+\sectionfont{\color{OMDTZblue}} 
+\subsectionfont{\color{OMDTZblue}}
+\subsubsectionfont{\color{OMDTZblue}}
+
+
+\usepackage{titlesec} %allows you to edit paragraph spacing in section, subsection and subsubsection
+\titlespacing\section{-5pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
+\titlespacing\subsection{-5pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{-5pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt
+\usepackage{sectsty}
+\usepackage{tocloft}
+
+\setcounter{tocdepth}{3} % Table of Contents includes only sections and subsections, not subsubsections.
+
+\setlength{\parskip}{1em} %sets the paragraph separation to 1em.
+\usepackage{float} % allows us to force figures to a specific place in the text
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\color{OMDTZgrey} \leftmark}
+\rhead{\color{OMDTZgrey} \rightmark}
+\fancyfoot[LE]{\color{OMDTZgrey} \thepage \hspace{5mm} \scriptsize OMDTZ PROFILE}
+\fancyfoot[RO]{\color{OMDTZgrey} \scriptsize OMDTZ PROFILE \hspace{3mm} \normalsize \thepage
+}
+
